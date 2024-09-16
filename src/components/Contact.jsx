@@ -18,13 +18,15 @@ function Contact() {
                 <span>Please fill out the form below to contact me</span>
                 <div className='flex flex-col items-center justify-center mt-5'>
                     <form
+                        netlify
                         onSubmit={handleSubmit(onSubmit)}
                         action=""
                         className='bg-slate-200 w-96 px-8 py-6 rounded-xl'>
                         <h1 className='text-xl font-semibold mb-4'>Send Your Message</h1>
                         <div className='flex flex-col mb-4'>
                             <label className='block text-gray-700' htmlFor="name">Full Name</label>
-                            <input
+                            <input name="name"
+                                
                                 {...register("name", { required: true })}
                                 className='shadow appearance-none border rounded-lg py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline' id='name' name='name' type="text" placeholder='Enter your full name' />
                             {errors.name && <span>This field is required</span>}
@@ -32,6 +34,7 @@ function Contact() {
                         <div className='flex flex-col mb-4'>
                             <label className='block text-gray-700' htmlFor="name">Email Address</label>
                             <input
+                                name="email"
                                 {...register("email", { required: true })}
                                 className='shadow appearance-none border rounded-lg py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline' id='name' name='email' type="text" placeholder='Enter your email' />
                             {errors.email && <span>This field is required</span>}
