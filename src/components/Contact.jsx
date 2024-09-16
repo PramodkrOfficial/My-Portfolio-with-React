@@ -18,7 +18,9 @@ function Contact() {
                 <span>Please fill out the form below to contact me</span>
                 <div className='flex flex-col items-center justify-center mt-5'>
                     <form
+                        
                         netlify
+                        name="contactUS"
                         onSubmit={handleSubmit(onSubmit)}
                         action=""
                         className='bg-slate-200 w-96 px-8 py-6 rounded-xl'>
