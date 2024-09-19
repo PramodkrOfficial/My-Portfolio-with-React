@@ -33,7 +33,7 @@ function Contact1() {
 
         handleChange = e => this.setState({ [e.target.name]: e.target.value });
 
-        render() {
+        return() {
             const { name, email, message } = this.state;
             return (
                 <form onSubmit={this.handleSubmit}>
@@ -60,7 +60,7 @@ function Contact1() {
         }
     }
 
-    ReactDOM.render(<ContactForm />, document.getElementById("root"));
+    // ReactDOM.render(<ContactForm />, document.getElementById("root"));
 }
 
 
