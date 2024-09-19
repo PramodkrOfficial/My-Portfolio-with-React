@@ -27,7 +27,7 @@ function Contact1() {
 
     return (
         <>
-            <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+            <form name="contact" netlify netlify-honeypot="bot-field" >
                 <input type="text" name="name" />
                 <input type="email" name="email" />
                 <textarea name="message"></textarea>
