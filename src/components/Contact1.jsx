@@ -6,13 +6,13 @@ function Contact1() {
 
 
 
-    const {
-        register,
-        handleSubmit,
-        watch,
-        formState: { errors },
-    } = useForm()
-    const onSubmit = (data) => console.log(data)
+    // const {
+    //     register,
+    //     handleSubmit,
+    //     watch,
+    //     formState: { errors },
+    // } = useForm()
+    // const onSubmit = (data) => console.log(data)
     return (
         <>
             <form name="contact" method="POST" data-netlify="true">
