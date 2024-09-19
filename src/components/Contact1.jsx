@@ -3,80 +3,62 @@ import { useForm } from 'react-hook-form';
 
 
 function Contact1() {
+    const encode = (data) => {
+        return Object.keys(data)
+            .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+            .join("&");
+    }
 
+    class ContactForm extends React.Component {
+        constructor(props) {
+            super(props);
+            this.state = { name: "", email: "", message: "" };
+        }
 
+        /* Here’s the juicy bit for posting the form submission */
 
-    const {
-        register,
-        handleSubmit,
-        watch,
-        formState: { errors },
-    } = useForm()
-    const onSubmit = (data) => console.log(data)
-    return (
-        <>
-            <form name="contact" method="POST" data-netlify="true">
-                <p>
-                    <label>Your Name: <input type="text" name="name" /></label>
-                </p>
-                <p>
-                    <label>Your Email: <input type="email" name="email" /></label>
-                </p>
-                <p>
-                    <label>Message: <textarea name="message"></textarea></label>
-                </p>
-                <p>
-                    <button type="submit">Send</button>
-                </p>
-            </form>
+        handleSubmit = e => {
+            fetch("/", {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: encode({ "form-name": "contact", ...this.state })
+            })
+                .then(() => alert("Success!"))
+                .catch(error => alert(error));
 
-            <div name='Contact' className='max-w-screen-2xl container mx-auto px-4 md:px-20 my-16'>
-                <h1 className='text-3xl font-bold mb-4'>Contact me</h1>
-                <span>Please fill out the form below to contact me</span>
-                <div className='flex flex-col items-center justify-center mt-5'>
-                    <form
-                        name='contact' method='POST' 
-                        data-netlify="true"
-                        onSubmit={handleSubmit(onSubmit)}
-                        // action=""
-                        className='bg-slate-200 w-96 px-8 py-6 rounded-xl'>
-                        <h1 className='text-xl font-semibold mb-4'>Send Your Message</h1>
-                        <div className='flex flex-col mb-4'>
-                            <label className='block text-gray-700' htmlFor="name">Full Name</label>
-                            <input
-                                type='text' name='name'
-                                {...register("name", { required: true })}
-                                className='shadow appearance-none border rounded-lg py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline' id='name' name='name' type="text" placeholder='Enter your full name' />
-                            {errors.name && <span>This field is required</span>}
-                        </div>
-                        <div className='flex flex-col mb-4'>
-                            <label className='block text-gray-700' htmlFor="name">Email Address</label>
-                            <input
-                                type='email' name='email'
-                                {...register("email", { required: true })}
-                                className='shadow appearance-none border rounded-lg py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline' id='name' name='email' type="text" placeholder='Enter your email' />
-                            {errors.email && <span>This field is required</span>}
-                        </div>
+            e.preventDefault();
+        };
 
-                        <div className='flex flex-col mb-4'>
-                            <label className='block text-gray-700' htmlFor="name">Message</label>
-                            <textarea
-                                {...register("message", { required: true })}
-                                className='outline-none border-2 border-gray-300  rounded-xl h-20 py-2 px-3 text-gray-700'
-                                id='message'
-                                name='message'
-                                rows='4'
-                                placeholder='Type your message here'
-                            >
-                            </textarea>
-                            {/* {errors.message && <span>This field is required</span>} */}
-                        </div>
-                        <button type='submit' className='bg-gray-800 text-white size-full rounded-xl items-center px-3 py-2 hover:bg-pink-900 hover:scale-105 duration-300'>Send</button>
-                    </form>
-                </div>
-            </div>
-        </>
-    )
+        handleChange = e => this.setState({ [e.target.name]: e.target.value });
+
+        render() {
+            const { name, email, message } = this.state;
+            return (
+                <form onSubmit={this.handleSubmit}>
+                    <p>
+                        <label>
+                            Your Name: <input type="text" name="name" value={name} onChange={this.handleChange} />
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            Your Email: <input type="email" name="email" value={email} onChange={this.handleChange} />
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            Message: <textarea name="message" value={message} onChange={this.handleChange} />
+                        </label>
+                    </p>
+                    <p>
+                        <button type="submit">Send</button>
+                    </p>
+                </form>
+            );
+        }
+    }
+
+    ReactDOM.render(<ContactForm />, document.getElementById("root"));
 }
 
 
