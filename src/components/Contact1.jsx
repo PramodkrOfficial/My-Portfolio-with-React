@@ -12,7 +12,7 @@ function Contact1() {
         watch,
         formState: { errors },
     } = useForm()
-    // const onSubmit = (data) => console.log(data)
+    const onSubmit = (data) => console.log(data)
     return (
         <>
             <form name="contact" method="POST" data-netlify="true">
@@ -21,12 +21,6 @@ function Contact1() {
                 </p>
                 <p>
                     <label>Your Email: <input type="email" name="email" /></label>
-                </p>
-                <p>
-                    <label>Your Role: <select name="role[]" multiple>
-                        <option value="leader">Leader</option>
-                        <option value="follower">Follower</option>
-                    </select></label>
                 </p>
                 <p>
                     <label>Message: <textarea name="message"></textarea></label>
@@ -41,8 +35,9 @@ function Contact1() {
                 <span>Please fill out the form below to contact me</span>
                 <div className='flex flex-col items-center justify-center mt-5'>
                     <form
-                        name='contact' method='POST' netlify
-                        // onSubmit={handleSubmit(onSubmit)}
+                        name='contact' method='POST' 
+                        data-netlify="true"
+                        onSubmit={handleSubmit(onSubmit)}
                         // action=""
                         className='bg-slate-200 w-96 px-8 py-6 rounded-xl'>
                         <h1 className='text-xl font-semibold mb-4'>Send Your Message</h1>
