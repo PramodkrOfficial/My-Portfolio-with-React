@@ -33,8 +33,8 @@ function Contact1() {
                 <textarea name="message"></textarea>
             </form>
 
-            <div id="root"></div>
-            <form name="contact" method="post">
+            {/* <div id="root"></div> */}
+            {/* <form name="contact" method="post">
                 <input type="hidden" name="form-name" value="contact" />
                 <p>
                     <label>Your Name: <input type="text" name="name" /></label>
@@ -48,7 +48,7 @@ function Contact1() {
                 <p>
                     <button type="submit">Send</button>
                 </p>
-            </form>
+            </form> */}
         </>
     )
 }
