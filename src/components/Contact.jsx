@@ -48,14 +48,14 @@ function Contact() {
                             <label className='block text-gray-700' htmlFor="name">Full Name</label>
                             <input type="text" name="name"
                                 {...register("name", { required: true })}
-                                className='shadow appearance-none border rounded-lg py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline' id='name' name='name' type="text" placeholder='Enter your full name' />
+                                className='shadow appearance-none border rounded-lg py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline' id='name' placeholder='Enter your full name' />
                             {errors.name && <span>This field is required</span>}
                         </div>
                         <div className='flex flex-col mb-4'>
                             <label className='block text-gray-700' htmlFor="name">Email Address</label>
                             <input type="email" name="email"
                                 {...register("email", { required: true })}
-                                className='shadow appearance-none border rounded-lg py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline' id='name' name='email' type="text" placeholder='Enter your email' />
+                                className='shadow appearance-none border rounded-lg py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline' id='name' placeholder='Enter your email' />
                             {errors.email && <span>This field is required</span>}
                         </div>
 
