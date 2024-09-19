@@ -3,26 +3,7 @@ import { useForm } from 'react-hook-form';
 
 
 function Contact1() {
-    // <form name="contact" method="POST" netlify>
-    //     <p>
-    //         <label>Your Name: <input type="text" name="name" /></label>
-    //     </p>
-    //     <p>
-    //         <label>Your Email: <input type="email" name="email" /></label>
-    //     </p>
-    //     <p>
-    //         <label>Your Role: <select name="role[]" multiple>
-    //             <option value="leader">Leader</option>
-    //             <option value="follower">Follower</option>
-    //         </select></label>
-    //     </p>
-    //     <p>
-    //         <label>Message: <textarea name="message"></textarea></label>
-    //     </p>
-    //     <p>
-    //         <button type="submit">Send</button>
-    //     </p>
-    // </form>
+   
 
 
     const {
@@ -34,6 +15,26 @@ function Contact1() {
     const onSubmit = (data) => console.log(data)
     return (
         <>
+            <form name="contact" method="POST" netlify>
+            <p>
+                <label>Your Name: <input type="text" name="name" /></label>
+            </p>
+            <p>
+                <label>Your Email: <input type="email" name="email" /></label>
+            </p>
+            <p>
+                <label>Your Role: <select name="role[]" multiple>
+                    <option value="leader">Leader</option>
+                    <option value="follower">Follower</option>
+                </select></label>
+            </p>
+            <p>
+                <label>Message: <textarea name="message"></textarea></label>
+            </p>
+            <p>
+                <button type="submit">Send</button>
+            </p>
+        </form>
             <div name='Contact' className='max-w-screen-2xl container mx-auto px-4 md:px-20 my-16'>
                 <h1 className='text-3xl font-bold mb-4'>Contact me</h1>
                 <span>Please fill out the form below to contact me</span>
@@ -72,7 +73,7 @@ function Contact1() {
                                 placeholder='Type your message here'
                             >
                             </textarea>
-                            {errors.message && <span>This field is required</span>}
+                            {/* {errors.message && <span>This field is required</span>} */}
                         </div>
                         <button type='submit' className='bg-gray-800 text-white size-full rounded-xl items-center px-3 py-2 hover:bg-pink-900 hover:scale-105 duration-300'>Send</button>
                     </form>
