@@ -6,12 +6,12 @@ function Contact1() {
 
 
 
-    // const {
-    //     register,
-    //     handleSubmit,
-    //     watch,
-    //     formState: { errors },
-    // } = useForm()
+    const {
+        register,
+        handleSubmit,
+        watch,
+        formState: { errors },
+    } = useForm()
     // const onSubmit = (data) => console.log(data)
     return (
         <>
