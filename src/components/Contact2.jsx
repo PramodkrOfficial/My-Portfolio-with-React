@@ -2,8 +2,7 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 
 
-function Contact1() {
-    render2();
+function Contact() {
     // <form name="contact" method="POST" netlify>
     //     <p>
     //         <label>Your Name: <input type="text" name="name" /></label>
@@ -25,20 +24,25 @@ function Contact1() {
     //     </p>
     // </form>
 
-    const encode = (data) => {
-        return Object.keys(data)
-            .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-            .join("&");
-    }
 
+    // const {
+    //     register,
+    //     handleSubmit,
+    //     watch,
+    //     formState: { errors },
+    // } = useForm()
+    // const onSubmit = (data) => console.log(data)
+
+
+
+    const { name, email, message } = this.state;
     class ContactForm extends React.Component {
         constructor(props) {
             super(props);
-            this.state = { name: "", email: "", message: "" };
         }
-
+        
         /* Here’s the juicy bit for posting the form submission */
-
+        
         handleSubmit = e => {
             fetch("/", {
                 method: "POST",
@@ -50,13 +54,14 @@ function Contact1() {
 
             e.preventDefault();
         };
-
+        
         handleChange = e => this.setState({ [e.target.name]: e.target.value });
 
-        render2() {
-            const { name, email, message } = this.state;
-            return (
-                <form onSubmit={this.handleSubmit}>
+        
+        this.state = { name: "", email: "", message: "" };
+    return (
+        <>
+            <form onSubmit={this.handleSubmit}>
                     <p>
                         <label>
                             Your Name: <input type="text" name="name" value={name} onChange={this.handleChange} />
@@ -76,12 +81,8 @@ function Contact1() {
                         <button type="submit">Send</button>
                     </p>
                 </form>
-            );
-        }
-    }
-
-
-
+        </>
+    )
 }
 
 
@@ -89,4 +90,4 @@ function Contact1() {
 
 
 
-export default Contact1;
+export default Contact;
