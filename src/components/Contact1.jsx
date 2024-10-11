@@ -25,13 +25,13 @@ function Contact1() {
     // </form>
 
 
-    const {
-        register,
-        handleSubmit,
-        watch,
-        formState: { errors },
-    } = useForm()
-    const onSubmit = (data) => console.log(data)
+    // const {
+    //     register,
+    //     handleSubmit,
+    //     watch,
+    //     formState: { errors },
+    // } = useForm()
+    // const onSubmit = (data) => console.log(data)
 
     return (
         <>
