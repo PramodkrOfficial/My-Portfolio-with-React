@@ -23,17 +23,20 @@ function Home() {
                         <div className='flex space-x-1 text-2xl md:text-4xl'>
                             <h1>Hello, I'm a</h1>
                             {/* <span className='text-red-700 font-bold'>Developer</span> */}
-                            <ReactTyped
-                                strings={["Developer", "Programmer", "Coder"]}
-                                typeSpeed={40}
-                                backSpeed={50}
-                                loop={true}
-                            />
+                            
+                                <span className='text-cyan-800'>
+                                    <ReactTyped
+                                        strings={["Developer", "Programmer", "Coder"]}
+                                        typeSpeed={40}
+                                        backSpeed={50}
+                                        loop={true}
+                                    />
+                                </span>
                         </div>
                         <br />
-                        <p className='text-md md:text-md text-justify'>My name is Pramod Kumar, and I'm a dedicated developer looking to advance in the development and innovation industries. I am a quick learner who is passionate about technology and creativity.
-                            I am eager to utilize my academic knowledge in the real world and contribute to innovative initiatives while honing my programming, problem-solving, and cooperation skills.
-                            I have six weeks of cloud computing experience with UniConverge Technologies Pvt. Ltd.
+                        <p className='text-md md:text-md text-justify'>My name is <b>Pramod Kumar</b>, and I'm a dedicated developer looking to advance in the development and innovation industries. I am a quick learner who is passionate about <b>technology and creativity</b>.
+                            I am eager to utilize my academic knowledge in the real world and contribute to innovative initiatives while honing my <b>programming</b>, <b>problem-solving</b>, and cooperation skills.
+                            I have six weeks of cloud computing experience with <b>UniConverge Technologies Pvt. Ltd</b>.
                         </p>
                         <br />
                         {/* social media icons */}

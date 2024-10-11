@@ -44,6 +44,7 @@ function Contact() {
                         onSubmit={handleSubmit(onSubmit)}
                         className='bg-slate-200 w-96 px-8 py-6 rounded-xl'>
                         <h1 className='text-xl font-semibold mb-4'>Send Your Message</h1>
+                        
                         <div className='flex flex-col mb-4'>
                             <label className='block text-gray-700' htmlFor="name">Full Name</label>
                             <input type="text" name="name"
@@ -51,6 +52,7 @@ function Contact() {
                                 className='shadow appearance-none border rounded-lg py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline' id='name' placeholder='Enter your full name' />
                             {errors.name && <span>This field is required</span>}
                         </div>
+
                         <div className='flex flex-col mb-4'>
                             <label className='block text-gray-700' htmlFor="name">Email Address</label>
                             <input type="email" name="email"

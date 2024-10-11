@@ -6,7 +6,11 @@ import java from '../image/java.png';
 import python from '../image/python.png';
 import spring from '../image/spring.png';
 import springboot from '../image/springboot.jpg';
-import dockerr from '../image/dockerr.png';
+import docker from '../image/dockerr.png';
+import react from '../image/reactjs.png';
+import github from '../image/github2.png';
+import express from '../image/exp.png';
+import nodejs from '../image/node.png'
 
 
 
@@ -53,8 +57,38 @@ function Experience() {
         },
         {
             id: 8,
-            img: dockerr,
+            img: docker,
             name: "DOCKER"
+
+        },
+        {
+            id: 10,
+            img: github,
+            name: "GITHUB"
+            
+        },
+        {
+            id: 11,
+            img: express,
+            name: "EXPRESS"
+            
+        },
+        {
+            id: 9,
+            img: react,
+            name: "REACT"
+
+        },
+        {
+            id: 11,
+            img: nodejs,
+            name: "NODE JS"
+
+        },
+        {
+            id: 11,
+            img: express,
+            name: "EXPRESS"
 
         },
     ]
@@ -64,7 +98,7 @@ function Experience() {
                 <div>
                     <h1 className='text-3xl font-bold mb-5'>Experience</h1>
                     <span className='underline font-semibold'>Featured Tools</span>
-                    <p className='text-green-800 font-bold'>I've more than 1 year of Experience in below technologies with good knowledge.</p>
+                    <p className='text-cyan-800 font-bold'>I've more than 1 year of Experience in below technologies with good knowledge.</p>
                     <div className='grid grid-cols-2 md:grid-cols-5 gap-7 my-3'>
                         {
                             cardItem.map(({ id, img, name }) => (

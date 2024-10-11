@@ -25,6 +25,14 @@ function Contact1() {
     // </form>
 
 
+    const {
+        register,
+        handleSubmit,
+        watch,
+        formState: { errors },
+    } = useForm()
+    const onSubmit = (data) => console.log(data)
+
     return (
         <>
             {/* <form name="contact" netlify netlify-honeypot="bot-field" hidden >
@@ -38,39 +46,58 @@ function Contact1() {
                 <h1 className='text-3xl font-bold mb-4'>Contact me</h1>
                 <span>Please fill out the form below to contact me</span>
                 <div className='flex flex-col items-center justify-center mt-5'>
-                <form name="contact" method="post" className='bg-slate-200 w-96 px-8 py-6 rounded-xl'>
-                    <h1 className='text-xl font-semibold mb-4'>Send Your Message</h1>
-                    <input type="hidden" name="form-name" value="contact" />
-                    <p>
+                    <form
+                        name="contact"
+                        method="post"
+                        onSubmit={handleSubmit(onSubmit)}
+                        className='bg-slate-200 w-96 px-8 py-6 rounded-xl'>
+                        <h1 className='text-xl font-semibold mb-4'>Send Your Message</h1>
+                        <input type="hidden" name="form-name" value="contact" />
+
                         <div className='flex flex-col mb-4'>
                             <label className='block text-gray-700' htmlFor="name">Full Name</label>
-                            <input type="text" name="name" className='shadow appearance-none border rounded-lg py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline' />
+                            <input
+                                {...register("name", { required: true })}
+                                className='shadow appearance-none border rounded-lg py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+                                id='name'
+                                name="name"
+                                type="text"
+                                placeholder='Enter your full name' />
+                            {errors.name && <span>This field is required</span>}
                         </div>
 
-                    </p>
-
-                    <p>
                         <div className='flex flex-col mb-4'>
                             <label className='block text-gray-700' htmlFor="name">Email Address</label>
-                            <input type="email" name="email" className='shadow appearance-none border rounded-lg py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline' />
+                            <input
+                                {...register("email", { required: true })}
+                                className='shadow appearance-none border rounded-lg py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+                                id='name'
+                                name="email"
+                                type="text"
+                                placeholder='Enter your email' />
+                            {errors.email && <span>This field is required</span>}
                         </div>
-                    </p>
-                    <p>
+
                         <div className='flex flex-col mb-4'>
                             <label className='block text-gray-700' htmlFor="name">Message</label>
-                            <textarea name="message"
+                            <textarea
+                                {...register("message", { required: true })}
                                 className='outline-none border-2 border-gray-300  rounded-xl h-20 py-2 px-3 text-gray-700'
                                 id='message'
+                                name="message"
+                                type="text"
                                 rows='4'
                                 placeholder='Type your message here'
                             >
-                            </textarea></div>
-                    </p>
-                    <p>
-                        <button type="submit" className='bg-gray-800 text-white size-full rounded-xl items-center px-3 py-2 hover:bg-pink-900 hover:scale-105 duration-300'>Send</button>
-                    </p>
-                </form>
-            </div>
+                            </textarea>
+                            {errors.message && <span>This field is required</span>}
+                        </div>
+
+                        <p>
+                            <button type="submit" className='bg-gray-800 text-white size-full rounded-xl items-center px-3 py-2 hover:bg-pink-900 hover:scale-105 duration-300'>Send</button>
+                        </p>
+                    </form>
+                </div>
             </div>
         </>
     )

@@ -76,20 +76,20 @@ function Navbar() {
                                             key={id}>
                                             {/* {text} */}
                                             <Link onClick={() => setMenu(!menu)}
-                                            activeClass="active"
-                                            to={text}
-                                            spy={true}
-                                            smooth={true}
-                                            hashSpy={true}
-                                            offset={-70}
-                                            duration={500}
-                                            delay={100}
-                                            isDynamic={true}
-                                            ignoreCancelEvents={false}
-                                            spyThrottle={500}
-                                        >
-                                            {text}
-                                        </Link>
+                                                activeClass="active"
+                                                to={text}
+                                                spy={true}
+                                                smooth={true}
+                                                hashSpy={true}
+                                                offset={-70}
+                                                duration={500}
+                                                delay={100}
+                                                isDynamic={true}
+                                                ignoreCancelEvents={false}
+                                                spyThrottle={500}
+                                            >
+                                                {text}
+                                            </Link>
                                         </li>
                                     ))
                                 }

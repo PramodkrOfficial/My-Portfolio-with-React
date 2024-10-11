@@ -10,7 +10,10 @@ import twovid from '../video/Two.mp4';
 
 
 function Projects() {
+   
+    alert ("Welcome to the my website");
     const cardItem = [
+
         {
             id: 1,
             img: bspic,
@@ -57,8 +60,6 @@ function Projects() {
                                             < button
                                                 className='bg-blue-700 hover:bg-pink-700 text-white font-bold px-4 py-2 rounded-xl'
                                             ><a href={vurl}>Video</a>
-
-
                                             </button>
                                             <button className='bg-green-600 hover:bg-pink-800 text-white font-bold px-4 py-2 rounded-xl'>
                                                 <a href={surl}>Source Code</a>

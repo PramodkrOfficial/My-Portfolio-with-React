@@ -9,16 +9,21 @@ import Contact from './components/Contact';
 import Contact1 from './components/Contact1';
 
 function App() {
+
+  // alert ("Welcome to the my website");
+
   return (
     <>
-      <Navbar />
-      <Home />
-      <About />
-      <Projects />
-      <Experience />
-      <Contact1 />
-      {/* <Contact /> */}
-      <Footer />
+      <div>
+        <Navbar />
+        <Home />
+        <About />
+        <Projects />
+        <Experience />
+        <Contact1 />
+        {/* <Contact /> */}
+        <Footer />
+      </div>
     </>
   )
 }
