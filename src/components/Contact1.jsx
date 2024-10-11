@@ -47,7 +47,7 @@ function Contact1() {
                 <span>Please fill out the form below to contact me</span>
                 <div className='flex flex-col items-center justify-center mt-5'>
                     <form
-                        name="contact" netlify netlify-honeypot="bot-field" 
+                        name="contact"  netlify-honeypot="bot-field" 
                         method="post"
                         onSubmit={handleSubmit(onSubmit)}
                         className='bg-slate-200 w-96 px-8 py-6 rounded-xl'>
