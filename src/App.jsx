@@ -32,7 +32,7 @@ function App() {
       <Projects />
       <Experience />
       <Contact1 />
-      <Contact />
+      // <Contact />
       <Footer />
 >>>>>>> 2dbd724a0cdfc448eae8d407ad8668fcf9522a70
     </>

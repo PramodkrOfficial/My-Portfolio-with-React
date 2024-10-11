@@ -60,11 +60,6 @@ function Projects() {
                                             < button
                                                 className='bg-blue-700 hover:bg-pink-700 text-white font-bold px-4 py-2 rounded-xl'
                                             ><a href={vurl}>Video</a>
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 2dbd724a0cdfc448eae8d407ad8668fcf9522a70
                                             </button>
                                             <button className='bg-green-600 hover:bg-pink-800 text-white font-bold px-4 py-2 rounded-xl'>
                                                 <a href={surl}>Source Code</a>
