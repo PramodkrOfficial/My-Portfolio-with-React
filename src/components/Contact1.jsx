@@ -32,10 +32,10 @@ function Contact1() {
         formState: { errors },
     } = useForm()
     const onSubmit = (data) => console.log(data)
-<<<<<<< HEAD
 
-    return (
-        <>
+
+    // return (
+    //     <>
             {/* <form name="contact" netlify netlify-honeypot="bot-field" hidden >
                 <input type="text" name="name" />
                 <input type="email" name="email" />
@@ -43,17 +43,17 @@ function Contact1() {
             </form> */}
 
             {/* <div id="root"></div> */}
-            <div className='max-w-screen-2xl container mx-auto px-4 md:px-20 my-16'>
-=======
+            // <div className='max-w-screen-2xl container mx-auto px-4 md:px-20 my-16'>
+
     return (
         <>
             <div name='Contact' className='max-w-screen-2xl container mx-auto px-4 md:px-20 my-16'>
->>>>>>> 2dbd724a0cdfc448eae8d407ad8668fcf9522a70
+
                 <h1 className='text-3xl font-bold mb-4'>Contact me</h1>
                 <span>Please fill out the form below to contact me</span>
                 <div className='flex flex-col items-center justify-center mt-5'>
                     <form
-<<<<<<< HEAD
+
                         name="contact" netlify hidden
                         method="post"
                         onSubmit={handleSubmit(onSubmit)}
@@ -82,7 +82,7 @@ function Contact1() {
                                 name="email"
                                 type="text"
                                 placeholder='Enter your email' />
-=======
+
                         name='contact' method='POST' netlify
                         // onSubmit={handleSubmit(onSubmit)}
                         // action=""
@@ -102,7 +102,7 @@ function Contact1() {
                                 type='email' name='email'
                                 {...register("email", { required: true })}
                                 className='shadow appearance-none border rounded-lg py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline' id='name' name='email' type="text" placeholder='Enter your email' />
->>>>>>> 2dbd724a0cdfc448eae8d407ad8668fcf9522a70
+
                             {errors.email && <span>This field is required</span>}
                         </div>
 
@@ -112,26 +112,25 @@ function Contact1() {
                                 {...register("message", { required: true })}
                                 className='outline-none border-2 border-gray-300  rounded-xl h-20 py-2 px-3 text-gray-700'
                                 id='message'
-<<<<<<< HEAD
+
                                 name="message"
                                 type="text"
-=======
+
                                 name='message'
->>>>>>> 2dbd724a0cdfc448eae8d407ad8668fcf9522a70
+
                                 rows='4'
                                 placeholder='Type your message here'
                             >
                             </textarea>
                             {errors.message && <span>This field is required</span>}
                         </div>
-<<<<<<< HEAD
 
                         <p>
                             <button type="submit" className='bg-gray-800 text-white size-full rounded-xl items-center px-3 py-2 hover:bg-pink-900 hover:scale-105 duration-300'>Send</button>
                         </p>
-=======
+
                         <button type='submit' className='bg-gray-800 text-white size-full rounded-xl items-center px-3 py-2 hover:bg-pink-900 hover:scale-105 duration-300'>Send</button>
->>>>>>> 2dbd724a0cdfc448eae8d407ad8668fcf9522a70
+
                     </form>
                 </div>
             </div>
@@ -143,9 +142,4 @@ function Contact1() {
 
 
 
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 2dbd724a0cdfc448eae8d407ad8668fcf9522a70
 export default Contact1;
