@@ -36,14 +36,14 @@ function Contact1() {
 
     // return (
     //     <>
-            {/* <form name="contact" netlify netlify-honeypot="bot-field" hidden >
+    {/* <form name="contact" netlify netlify-honeypot="bot-field" hidden >
                 <input type="text" name="name" />
                 <input type="email" name="email" />
                 <textarea name="message"></textarea>
             </form> */}
 
-            {/* <div id="root"></div> */}
-            // <div className='max-w-screen-2xl container mx-auto px-4 md:px-20 my-16'>
+    {/* <div id="root"></div> */ }
+    // <div className='max-w-screen-2xl container mx-auto px-4 md:px-20 my-16'>
 
     return (
         <>
@@ -83,17 +83,18 @@ function Contact1() {
                                 type="text"
                                 placeholder='Enter your email' />
 
-                        name='contact' method='POST' netlify
+                            name='contact' method='POST' netlify
                         // onSubmit={handleSubmit(onSubmit)}
                         // action=""
-                        className='bg-slate-200 w-96 px-8 py-6 rounded-xl'>
+                            className='bg-slate-200 w-96 px-8 py-6 rounded-xl'
+                        </div>
                         <h1 className='text-xl font-semibold mb-4'>Send Your Message</h1>
                         <div className='flex flex-col mb-4'>
                             <label className='block text-gray-700' htmlFor="name">Full Name</label>
                             <input
                                 type='text' name='name'
                                 {...register("name", { required: true })}
-                                className='shadow appearance-none border rounded-lg py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline' id='name' name='name' type="text" placeholder='Enter your full name' />
+                                className='shadow appearance-none border rounded-lg py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline' id='name' placeholder='Enter your full name' />
                             {errors.name && <span>This field is required</span>}
                         </div>
                         <div className='flex flex-col mb-4'>
@@ -101,7 +102,7 @@ function Contact1() {
                             <input
                                 type='email' name='email'
                                 {...register("email", { required: true })}
-                                className='shadow appearance-none border rounded-lg py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline' id='name' name='email' type="text" placeholder='Enter your email' />
+                                className='shadow appearance-none border rounded-lg py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline' id='name' placeholder='Enter your email' />
 
                             {errors.email && <span>This field is required</span>}
                         </div>
@@ -115,9 +116,6 @@ function Contact1() {
 
                                 name="message"
                                 type="text"
-
-                                name='message'
-
                                 rows='4'
                                 placeholder='Type your message here'
                             >
