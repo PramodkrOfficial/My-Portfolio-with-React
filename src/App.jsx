@@ -24,14 +24,6 @@ function App() {
         {/* <Contact /> */}
         <Footer />
       </div>
-      <Navbar />
-      <Home />
-      <About />
-      <Projects />
-      <Experience />
-      <Contact1 />
-      // <Contact />
-      <Footer />
     </>
   )
 }

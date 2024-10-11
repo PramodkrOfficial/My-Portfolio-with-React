@@ -53,7 +53,6 @@ function Contact1() {
                 <span>Please fill out the form below to contact me</span>
                 <div className='flex flex-col items-center justify-center mt-5'>
                     <form
-
                         name="contact" netlify hidden
                         method="post"
                         onSubmit={handleSubmit(onSubmit)}
@@ -113,7 +112,6 @@ function Contact1() {
                                 {...register("message", { required: true })}
                                 className='outline-none border-2 border-gray-300  rounded-xl h-20 py-2 px-3 text-gray-700'
                                 id='message'
-
                                 name="message"
                                 type="text"
                                 rows='4'
