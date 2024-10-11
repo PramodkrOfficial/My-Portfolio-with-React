@@ -14,7 +14,6 @@ function App() {
 
   return (
     <>
-<<<<<<< HEAD
       <div>
         <Navbar />
         <Home />
@@ -25,7 +24,6 @@ function App() {
         {/* <Contact /> */}
         <Footer />
       </div>
-=======
       <Navbar />
       <Home />
       <About />
@@ -34,7 +32,6 @@ function App() {
       <Contact1 />
       // <Contact />
       <Footer />
->>>>>>> 2dbd724a0cdfc448eae8d407ad8668fcf9522a70
     </>
   )
 }
