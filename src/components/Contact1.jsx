@@ -49,7 +49,7 @@ function Contact1() {
                     <form
                         name="contact"
                         method="post"
-                        onSubmit={handleSubmit(onSubmit)}
+                        onSubmit={(onSubmit)}
                         className='bg-slate-200 w-96 px-8 py-6 rounded-xl'>
                         <h1 className='text-xl font-semibold mb-4'>Send Your Message</h1>
                         <input type="hidden" name="form-name" value="contact" />
