@@ -11,7 +11,7 @@ import twovid from '../video/Two.mp4';
 
 function Projects() {
    
-    alert ("Welcome to the my website");
+    // alert ("Welcome to the my website");
     const cardItem = [
 
         {

@@ -1,13 +1,51 @@
 import React from 'react';
-import { useForm } from 'react-hook-form';
 
-function encode(data) {
-    return Object.keys(data)
-        .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-        .join('&')
-}
+// import { navigate } from 'gatsby'
+// import { useForm } from 'react-hook-form';
+
+// function encode(data) {
+//     return Object.keys(data)
+//         .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+//         .join('&')
+// }
 
 function Contact1() {
+
+
+  
+
+    /* Here’s the juicy bit for posting the form submission */
+
+
+
+  
+      return (
+        <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field" >
+          <p>
+            <label>
+              Your Name: <input type="text" name="name"  />
+            </label>
+          </p>
+          <p>
+            <label>
+              Your Email: <input type="email" name="email" />
+            </label>
+          </p>
+          <p>
+            <label>
+              Message: <textarea name="message" />
+            </label>
+          </p>
+          <p>
+            <button type="submit">Send</button>
+          </p>
+        </form>
+      );
+    }
+  
+
+  
+
     // <form name="contact" method="POST" netlify>
     //     <p>
     //         <label>Your Name: <input type="text" name="name" /></label>
@@ -32,30 +70,30 @@ function Contact1() {
 
 
 
-    const [state, setState] = React.useState({})
+    // const [state, setState] = React.useState({})
 
-    const handleChange = (e) => {
-        setState({ ...state, [e.target.name]: e.target.value })
-    }
+    // const handleChange = (e) => {
+    //     setState({ ...state, [e.target.name]: e.target.value })
+    // }
 
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        const form = e.target
-        fetch('/', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: encode({
-                'form-name': form.getAttribute('name'),
-                ...state,
-            }),
-        })
-            .then(() => navigate(form.getAttribute('action')))
-            .catch((error) => alert(error))
-    }
+    // const handleSubmit = (e) => {
+    //     e.preventDefault()
+    //     const form = e.target
+    //     fetch('/', {
+    //         method: 'POST',
+    //         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    //         body: encode({
+    //             'form-name': form.getAttribute('name'),
+    //             ...state,
+    //         }),
+    //     })
+    //         .then(() => navigate(form.getAttribute('action')))
+    //         .catch((error) => alert(error))
+    // }
 
-    return (
-        <Layout>
-            <h1>Contact</h1>
+  
+        
+            {/* <h1>Contact</h1>
             <form
                 name="contact"
                 method="post"
@@ -65,7 +103,7 @@ function Contact1() {
                 onSubmit={handleSubmit}
             >
                 {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-                <input type="hidden" name="form-name" value="contact" />
+                {/* <input type="hidden" name="form-name" value="contact" />
                 <p hidden>
                     <label>
                         Don’t fill this out: <input name="bot-field" onChange={handleChange} />
@@ -95,10 +133,20 @@ function Contact1() {
                 <p>
                     <button type="submit">Send</button>
                 </p>
-            </form>
-        </Layout>
-    )
-}
+            </form> */} 
+
+{/* <form name="contact" netlify>
+  <p>
+    <label>Name <input type="text" name="name" /></label>
+  </p>
+  <p>
+    <label>Email <input type="email" name="email" /></label>
+  </p>
+  <p>
+    <button type="submit">Send</button>
+  </p>
+</form> */}
+
 
 // const {
 //     register,
