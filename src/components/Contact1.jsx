@@ -36,21 +36,21 @@ function Contact1() {
 
     // return (
         //     <>
+        
+        {/* <form name="contact" netlify netlify-honeypot="bot-field" >
+            <input type="text" name="name" />
+            <input type="email" name="email" />
+            <textarea name="message"></textarea>
+            </form>  */}
         return (
-<>
-     <form name="contact" netlify netlify-honeypot="bot-field" >
-                <input type="text" name="name" />
-                <input type="email" name="email" />
-                <textarea name="message"></textarea>
-            </form> 
-
+        <>
             <div name='Contact' className='max-w-screen-2xl container mx-auto px-4 md:px-20 my-16'>
 
                 <h1 className='text-3xl font-bold mb-4'>Contact me</h1>
                 <span>Please fill out the form below to contact me</span>
                 <div className='flex flex-col items-center justify-center mt-5'>
                     <form
-                        name="contact" netlify hidden
+                        name="contact" netlify
                         method="post"
                         onSubmit={handleSubmit(onSubmit)}
                         className='bg-slate-200 w-96 px-8 py-6 rounded-xl'>
