@@ -57,7 +57,7 @@ function Contact1() {
                         className='bg-slate-200 w-96 px-8 py-6 rounded-xl'>
                         <h1 className='text-xl font-semibold mb-4'>Send Your Message</h1>
                         <input type="hidden" name="form-name" value="contact" />
-
+                    </form>
                 </div>
                 <h1 className='text-xl font-semibold mb-4'>Send Your Message</h1>
                 <div className='flex flex-col mb-4'>
@@ -97,9 +97,9 @@ function Contact1() {
                     <button type="submit" className='bg-gray-800 text-white size-full rounded-xl items-center px-3 py-2 hover:bg-pink-900 hover:scale-105 duration-300'>Send</button>
                 </p>
 
-            </form>
-        </div >
+
             </div >
+        
         </>
     )
 }
