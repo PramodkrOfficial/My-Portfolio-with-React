@@ -35,18 +35,15 @@ function Contact1() {
 
 
     // return (
-    //     <>
-    {/* <form name="contact" netlify netlify-honeypot="bot-field" hidden >
+        //     <>
+        return (
+<>
+     <form name="contact" netlify netlify-honeypot="bot-field" hidden >
                 <input type="text" name="name" />
                 <input type="email" name="email" />
                 <textarea name="message"></textarea>
-            </form> */}
+            </form> 
 
-    {/* <div id="root"></div> */ }
-    // <div className='max-w-screen-2xl container mx-auto px-4 md:px-20 my-16'>
-
-    return (
-        <>
             <div name='Contact' className='max-w-screen-2xl container mx-auto px-4 md:px-20 my-16'>
 
                 <h1 className='text-3xl font-bold mb-4'>Contact me</h1>
