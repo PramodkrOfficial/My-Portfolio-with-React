@@ -2,75 +2,56 @@ import React from 'react'
 import { navigate } from 'gatsby-link'
 // import Layout from '../layout'
 
-function encode(data) {
-  return Object.keys(data)
-    .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-    .join('&')
-}
+// function encode(data) {
+//   return Object.keys(data)
+//     .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+//     .join('&')
+// }
 
 export default function Contact1() {
-  const [state, setState] = React.useState({})
+//   const [state, setState] = React.useState({})
 
-  const handleChange = (e) => {
-    setState({ ...state, [e.target.name]: e.target.value })
-  }
+//   const handleChange = (e) => {
+//     setState({ ...state, [e.target.name]: e.target.value })
+//   }
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    const form = e.target
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({
-        'form-name': form.getAttribute('name'),
-        ...state,
-      }),
-    })
-      .then(() => console.log(form.getAttribute('action')))
-      .catch((error) => alert(error))
-  }
+//   const handleSubmit = (e) => {
+//     e.preventDefault()
+//     const form = e.target
+//     fetch('/', {
+//       method: 'POST',
+//       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+//       body: encode({
+//         'form-name': form.getAttribute('name'),
+//         ...state,
+//       }),
+//     })
+//       .then(() => console.log(form.getAttribute('action')))
+//       .catch((error) => alert(error))
+//   }
 
   return (
     <>
-      <h1>Contact</h1>
-      <form
-        name="contact"
-        method="post"
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"
-      >
-        {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-        <input type="hidden" name="form-name" value="contact" />
-        <p hidden>
-          <label>
-            Don’t fill this out: <input name="bot-field"  />
-          </label>
-        </p>
-        <p>
-          <label>
-            Your name:
-            <br />
-            <input type="text" name="name" />
-          </label>
-        </p>
-        <p>
-          <label>
-            Your email:
-            <br />
-            <input type="email" name="email"  />
-          </label>
-        </p>
-        <p>
-          <label>
-            Message:
-            <br />
-            <textarea name="message" />
-          </label>
-        </p>
-        <p>
-          <button type="submit">Send</button>
-        </p>
-      </form>
+      <form name="contact" method="POST" data-netlify="true">
+  <p>
+    <label>Your Name: <input type="text" name="name" /></label>
+  </p>
+  <p>
+    <label>Your Email: <input type="email" name="email" /></label>
+  </p>
+  <p>
+    <label>Your Role: <select name="role[]" multiple>
+      <option value="leader">Leader</option>
+      <option value="follower">Follower</option>
+    </select></label>
+  </p>
+  <p>
+    <label>Message: <textarea name="message"></textarea></label>
+  </p>
+  <p>
+    <button type="submit">Send</button>
+  </p>
+</form>
         </>
   
   )
