@@ -1,5 +1,5 @@
-import React from 'react'
-import { navigate } from 'gatsby-link'
+import React from "react";
+import { navigate } from "gatsby-link";
 // import Layout from '../layout'
 
 // function encode(data) {
@@ -9,48 +9,54 @@ import { navigate } from 'gatsby-link'
 // }
 
 export default function Contact1() {
-//   const [state, setState] = React.useState({})
+  //   const [state, setState] = React.useState({})
 
-//   const handleChange = (e) => {
-//     setState({ ...state, [e.target.name]: e.target.value })
-//   }
+  //   const handleChange = (e) => {
+  //     setState({ ...state, [e.target.name]: e.target.value })
+  //   }
 
-//   const handleSubmit = (e) => {
-//     e.preventDefault()
-//     const form = e.target
-//     fetch('/', {
-//       method: 'POST',
-//       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-//       body: encode({
-//         'form-name': form.getAttribute('name'),
-//         ...state,
-//       }),
-//     })
-//       .then(() => console.log(form.getAttribute('action')))
-//       .catch((error) => alert(error))
-//   }
+  //   const handleSubmit = (e) => {
+  //     e.preventDefault()
+  //     const form = e.target
+  //     fetch('/', {
+  //       method: 'POST',
+  //       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+  //       body: encode({
+  //         'form-name': form.getAttribute('name'),
+  //         ...state,
+  //       }),
+  //     })
+  //       .then(() => console.log(form.getAttribute('action')))
+  //       .catch((error) => alert(error))
+  //   }
 
   return (
     <>
-     <form name="contact" netlify netlify-honeypot="bot-field">
-     <input type="hidden" name="form-name" value="contact" />
+      <form
+        name="contact"
+        method="post"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+      >
+        <input type="hidden" name="form-name" value="contact" />
 
-  <p>
-    <label>Name <input type="text" name="name" /></label>
-  </p>
-  <p>
-    <label>Email <input type="email" name="email" /></label>
-  </p>
-  <p>
-    <button type="submit">Send</button>
-  </p>
-</form>
-        </>
-  
-  )
+        <p>
+          <label>
+            Name <input type="text" name="name" />
+          </label>
+        </p>
+        <p>
+          <label>
+            Email <input type="email" name="email" />
+          </label>
+        </p>
+        <p>
+          <button type="submit">Send</button>
+        </p>
+      </form>
+    </>
+  );
 }
-
-
 
 // import React from 'react';
 
@@ -65,14 +71,8 @@ export default function Contact1() {
 
 // function Contact1() {
 
-
-  
-
 //     /* Here’s the juicy bit for posting the form submission */
 
-
-
-  
 //       return (
 //         <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field" >
 //           <p>
@@ -96,9 +96,6 @@ export default function Contact1() {
 //         </form>
 //       );
 //     }
-  
-
-  
 
 //     // <form name="contact" method="POST" netlify>
 //     //     <p>
@@ -121,9 +118,6 @@ export default function Contact1() {
 //     //     </p>
 //     // </form>
 
-
-
-
 //     // const [state, setState] = React.useState({})
 
 //     // const handleChange = (e) => {
@@ -145,8 +139,6 @@ export default function Contact1() {
 //     //         .catch((error) => alert(error))
 //     // }
 
-  
-        
 //             {/* <h1>Contact</h1>
 //             <form
 //                 name="contact"
@@ -187,7 +179,7 @@ export default function Contact1() {
 //                 <p>
 //                     <button type="submit">Send</button>
 //                 </p>
-//             </form> */} 
+//             </form> */}
 
 // {/* <form name="contact" netlify>
 //   <p>
@@ -201,7 +193,6 @@ export default function Contact1() {
 //   </p>
 // </form> */}
 
-
 // // const {
 // //     register,
 // //     handleSubmit,
@@ -209,7 +200,6 @@ export default function Contact1() {
 // //     formState: { errors },
 // // } = useForm()
 // // const onSubmit = (data) => console.log(data)
-
 
 // // return (
 // //     <>
@@ -222,7 +212,7 @@ export default function Contact1() {
 // //                 <button type="submit">Send</button>
 
 // //             </form>
-// //             {/* name="contact" netlify  
+// //             {/* name="contact" netlify
 // //                 <input type="text" name="name" />
 // //                 <input type="email" name="email" />
 // //                 <textarea name="message"></textarea>
@@ -282,15 +272,10 @@ export default function Contact1() {
 // //                     </p>
 // //                 </form>
 
-
 // //             </div > */}
 
 // //         </>
 // //     )
 // // }
-
-
-
-
 
 // export default Contact1;
