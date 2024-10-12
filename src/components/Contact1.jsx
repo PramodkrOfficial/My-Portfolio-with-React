@@ -32,7 +32,9 @@ export default function Contact1() {
 
   return (
     <>
-     <form name="contact" netlify>
+     <form name="contact" netlify netlify-honeypot="bot-field">
+     <input type="hidden" name="form-name" value="contact" />
+
   <p>
     <label>Name <input type="text" name="name" /></label>
   </p>
