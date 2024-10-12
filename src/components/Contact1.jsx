@@ -39,12 +39,24 @@ function Contact1() {
 
     return (
         <>
-            <form name="contact" netlify  >
+
+            <form name="contact" netlify>
+                <p>
+                    <label>Name <input type="text" name="name" /></label>
+                </p>
+                <p>
+                    <label>Email <input type="email" name="email" /></label>
+                </p>
+                <p>
+                    <button type="submit">Send</button>
+                </p>
+            </form>
+            {/* name="contact" netlify  
                 <input type="text" name="name" />
                 <input type="email" name="email" />
                 <textarea name="message"></textarea>
                 <button type='submit'>submit</button>
-            </form>
+            
             <div name='Contact' className='max-w-screen-2xl container mx-auto px-4 md:px-20 my-16'>
 
                 <h1 className='text-3xl font-bold mb-4'>Contact me</h1>
@@ -100,7 +112,7 @@ function Contact1() {
                 </form>
 
 
-            </div >
+            </div > */}
 
         </>
     )
