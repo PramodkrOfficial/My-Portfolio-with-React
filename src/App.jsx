@@ -20,8 +20,8 @@ function App() {
         <About />
         <Projects />
         <Experience />
-        <Contact1 />
-        {/* <Contact /> */}
+        <Contact />
+        {/* <Contact1 /> */}
         <Footer />
       </div>
     </>
