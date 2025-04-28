@@ -10,6 +10,8 @@ import Contact from './components/Contact';
 
 function App() {
 
+  alert("Welcome to the my website");
+  
   return (
     <>
       <div>
