@@ -6,15 +6,15 @@ import Projects from './components/Projects';
 import Experience from './components/Experience';
 import Footer from './components/Footer';
 import Contact from './components/Contact';
+import WelcomeAlert from './components/Alert';
 
 
 function App() {
 
-  alert("Welcome to the my website");
-  
   return (
     <>
       <div>
+        <WelcomeAlert />
         <Navbar />
         <Home />
         <About />
