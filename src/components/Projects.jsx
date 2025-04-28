@@ -4,12 +4,12 @@ import cnvpic from '../image/cnvpic.png';
 import anmpic from '../image/anmpic.png';
 import awdpic from '../image/awdpic.png';
 import twovid from '../video/Two.mp4';
-import bookstorevid from "../video/Bookstore.mp4";
+import bookstorevid from "../video/BookStore.mp4";
 
 
 function Projects() {
    
-    // alert ("Welcome to the my website");
+    alert ("Welcome to the my website");
     const cardItem = [
 
         {

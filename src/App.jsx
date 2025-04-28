@@ -6,11 +6,9 @@ import Projects from './components/Projects';
 import Experience from './components/Experience';
 import Footer from './components/Footer';
 import Contact from './components/Contact';
-import Contact1 from './components/Contact1';
+
 
 function App() {
-
-  // alert ("Welcome to the my website");
 
   return (
     <>

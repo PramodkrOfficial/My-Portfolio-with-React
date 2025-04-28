@@ -2,17 +2,20 @@ import React from 'react';
 import html2 from '../image/html2.png';
 import css1 from '../image/css1.png';
 import javascript from '../image/javascript.png';
+
 import java from '../image/java.png';
 import python from '../image/python.png';
 import spring from '../image/spring.png';
 import springboot from '../image/springboot.jpg';
+
 import docker from '../image/dockerr.png';
-import react from '../image/reactjs.png';
 import github from '../image/github2.png';
+import mysql from '../image/mysqlpic.png'
+
+import mongodb from '../image/mongodbpic.jpeg'
+import react from '../image/reactjs.png';
 import express from '../image/exp.png';
 import nodejs from '../image/node.png'
-import mongodb from '../image/mongodbpic.jpeg'
-import mysql from '../image/mysqlpic.png'
 
 
 
