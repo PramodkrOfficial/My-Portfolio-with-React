@@ -11,6 +11,9 @@ import react from '../image/reactjs.png';
 import github from '../image/github2.png';
 import express from '../image/exp.png';
 import nodejs from '../image/node.png'
+import mongodb from '../image/mongodbpic.jpeg'
+import mysql from '../image/mysqlpic.png'
+
 
 
 
@@ -62,35 +65,41 @@ function Experience() {
 
         },
         {
-            id: 10,
+            id: 9,
             img: github,
             name: "GITHUB"
             
         },
         {
+            id: 10,
+            img: mongodb,
+            name: "MONGODB"
+
+        },
+        {
             id: 11,
             img: express,
             name: "EXPRESS"
             
         },
         {
-            id: 9,
+            id: 12,
             img: react,
             name: "REACT"
 
         },
         {
-            id: 11,
+            id: 13,
             img: nodejs,
             name: "NODE JS"
 
         },
         {
-            id: 11,
-            img: express,
-            name: "EXPRESS"
-
-        },
+            id: 14,
+            img: mysql,
+            name: "MYSQL"
+        }
+        
     ]
     return (
         <>

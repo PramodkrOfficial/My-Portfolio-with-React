@@ -4,9 +4,7 @@ import cnvpic from '../image/cnvpic.png';
 import anmpic from '../image/anmpic.png';
 import awdpic from '../image/awdpic.png';
 import twovid from '../video/Two.mp4';
-
-// import ebookapp from '../video/ebookapp.mp4';
-// import twogoodco from '../video/twogoodco.mp4';
+import bookstorevid from "../video/Bookstore.mp4";
 
 
 function Projects() {
@@ -18,7 +16,7 @@ function Projects() {
             id: 1,
             img: bspic,
             name: "BookStore Wapp",
-            vurl: twovid,
+            vurl: bookstorevid,
             surl: "https://github.com/PramodkrOfficial/UpSkillCampus"
         },
         {
