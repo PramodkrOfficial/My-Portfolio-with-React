@@ -9,7 +9,7 @@ import bookstorevid from "../video/BookStore.mp4";
 
 function Projects() {
    
-    // alert ("Welcome to the my website");
+    alert ("Welcome to the my website");
     const cardItem = [
 
         {
