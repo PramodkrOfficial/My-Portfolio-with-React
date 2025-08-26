@@ -3,8 +3,11 @@ import bspic from '../image/bspic.png';
 import cnvpic from '../image/cnvpic.png';
 import anmpic from '../image/anmpic.png';
 import awdpic from '../image/awdpic.png';
-import twovid from '../video/Two.mp4';
-import bookstorevid from "../video/BookStore.mp4";
+// import twovid from '../video/Two.mp4';
+// import bookstorevid from "../video/BookStore.mp4";
+
+import bookstorevid from "/video/BookStore.mp4";
+import twovid from '/video/Two.mp4';
 
 
 function Projects() {
