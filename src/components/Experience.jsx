@@ -19,7 +19,6 @@ import nodejs from '../image/node.png'
 
 
 
-
 function Experience() {
     const cardItem = [
         {
