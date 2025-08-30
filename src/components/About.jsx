@@ -53,7 +53,6 @@
 
 // export default About;
 
-
 // components/About.jsx
 // About Component with Staggered Animations
 
@@ -75,8 +74,8 @@ function About() {
       title: "Skills & Expertise",
       icon: "💻",
       content: `Proficient in Java, Python, JavaScript, MongoDB, Express Js, React Js, Node Js 
-                     experienced with VS Code, PyCharm, InteliJ IDEA, Node Js, Git, Docker, Aws, MySql, 
-                     JDBC, GitHub. Strong gsap & scrollTrigger of UX & UI Design excellent problem-solving 
+                     experienced with VS Code, PyCharm, InteliJ IDEA, Node Js, Git, Docker, Aws, MySql,
+                     JDBC GitHub, Strong gsap & scrollTrigger of UX & UI Design excellent problem-solving 
                      skills effective communicator and collaborator.`,
       delay: 600,
     },
@@ -90,13 +89,23 @@ function About() {
       delay: 800,
     },
     {
+      title: "Professional Experience",
+      icon: "🚀",
+      content: `React.Js Developer Intern, The Entrepreneurship Network Pvt. Ltd. from 12/2024 to 03/2025. 
+                     I learned about JavaScript Framework with real world projects throughout my internship and developed my abilities in 
+                     reuseable code, enhanced my coding style, api integration, collaborating with peers and mentors, and problem-solving.`,
+      delay: 1000,
+    },
+    {
       title: "Achievements & Awards",
       icon: "🏆",
-      content: `31st rank in "Java Quiz", Datapro computers Pvt. Ltd. - 2024.
-                     Excellent performance in the "Robotic Coding competition", Robotic IO Pvt.Ltd. - 2024.
-                     Enthusiastically participated in "NSPC", National Students Paryavaran Competition - 2024.
+      content: `31st rank in "Java Quiz" Datapro computers Pvt. Ltd. - 2024,
+                     I achieved basic problem in DSA certificate from Hacker Rank,
+                     I earned the Java Bronze Badge from Skillyst through foundit,
+                     Excellent performance in the "Robotic Coding competition" Robotic IO Pvt.Ltd. - 2024,
+                     Enthusiastically participated in "NSPC" National Students Paryavaran Competition - 2024,
                      Good performance in "Spring Into Action - A College Quiz Series", GoSpring.ai - 2024.`,
-      delay: 1000,
+      delay: 1200,
     },
     {
       title: "Mission Statement",
@@ -105,7 +114,7 @@ function About() {
                      that surpass client expectations and improve the digital landscape by utilizing my abilities 
                      and creativity. My commitment to lifelong learning and development stems from my constant 
                      search for fresh challenges and chances to broaden my perspectives.`,
-      delay: 1200,
+      delay: 1400,
     },
   ];
 
@@ -158,11 +167,10 @@ function About() {
           >
             <div className="group relative">
               <div
-                className={`flex flex-col md:flex-row items-start gap-6 p-8 rounded-2xl transition-all duration-500 hover:shadow-2xl ${
-                  index % 2 === 0
+                className={`flex flex-col md:flex-row items-start gap-6 p-8 rounded-2xl transition-all duration-500 hover:shadow-2xl ${index % 2 === 0
                     ? "bg-gradient-to-r from-cyan-50 to-blue-50 dark:from-gray-800 dark:to-gray-700 hover:shadow-cyan-200/50 dark:hover:shadow-cyan-500/20"
                     : "bg-gradient-to-l from-purple-50 to-pink-50 dark:from-gray-700 dark:to-gray-800 hover:shadow-purple-200/50 dark:hover:shadow-purple-500/20"
-                }`}
+                  }`}
               >
                 {/* Icon Section */}
                 <div className="flex-shrink-0">
@@ -193,11 +201,10 @@ function About() {
 
               {/* Decorative Border */}
               <div
-                className={`absolute top-0 left-0 w-full h-1 rounded-t-2xl bg-gradient-to-r ${
-                  index % 2 === 0
+                className={`absolute top-0 left-0 w-full h-1 rounded-t-2xl bg-gradient-to-r ${index % 2 === 0
                     ? "from-cyan-500 to-blue-500"
                     : "from-purple-500 to-pink-500"
-                } transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500`}
+                  } transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500`}
               ></div>
             </div>
           </AnimationWrapper>
@@ -208,4 +215,3 @@ function About() {
 }
 
 export default About;
-

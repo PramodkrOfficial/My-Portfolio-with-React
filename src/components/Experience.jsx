@@ -134,7 +134,6 @@
 // Updated Experience.jsx with Professional Animations:
 
 
-
 import React, { useState, useEffect } from "react";
 import AnimationWrapper from "./AnimationWrapper";
 
@@ -573,6 +572,12 @@ function Experience() {
                   year: "2024",
                   title: "Advanced React & Node.js",
                   desc: "Built multiple projects with React and Node.js",
+                  icon: "⚛️",
+                },
+                {
+                  year: "2025",
+                  title: "React.Js Developer Internship",
+                  desc: "Real world projects using React and Node.js during a 4-months internship at The Entrepreneurship Network.",
                   icon: "⚛️",
                 },
                 {

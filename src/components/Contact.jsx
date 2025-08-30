@@ -281,7 +281,7 @@ function Contact() {
     {
       icon: FaEnvelope,
       title: "Email",
-      value: "pramodkr@example.com",
+      value: "pramodkumarrupauliya@gmail.com",
       color: "from-red-500 to-pink-500",
     },
     {
@@ -293,7 +293,7 @@ function Contact() {
     {
       icon: FaMapMarkerAlt,
       title: "Location",
-      value: "Gurugram, Haryana, India",
+      value: "Greater Noida, Uttar Pradesh, India",
       color: "from-blue-500 to-purple-500",
     },
   ];
